@@ -1,0 +1,42 @@
+@import '../../Variables/theming';
+
+.root {
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+
+    width: 100vw;
+    height: 10vh;
+
+    position: fixed;
+    top: 0;
+
+    color: $text-high-emphasis;
+    border-bottom: 1px dashed $lavender-pink;
+    background: $beige;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.4rem;
+    font-family: 'Parisienne', cursive;
+
+    #logo__image {
+        border-radius: 50%;
+        border: 3px solid darken($lavender-pink, 10);
+    }
+
+    h2 {
+        margin-bottom: -4px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .root {
+        justify-content: center;
+    }
+}

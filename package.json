@@ -1,0 +1,29 @@
+{
+    "name": "just-me-amelia",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "npx prisma init && npx prisma generate && npx prisma db pull && next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.2.0",
+        "lucide-react": "^0.274.0",
+        "next": "13.4.19",
+        "node-cache": "^5.1.2",
+        "prisma": "^5.2.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "sass": "^1.66.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.5.9",
+        "@types/react": "^18.2.21",
+        "@types/react-dom": "^18.2.7",
+        "eslint": "^8.48.0",
+        "eslint-config-next": "^13.4.19",
+        "typescript": "^5.2.2"
+    }
+}

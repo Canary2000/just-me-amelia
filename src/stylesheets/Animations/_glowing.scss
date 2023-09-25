@@ -1,0 +1,26 @@
+@keyframes glowing {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0px 0px 100px 17px #FFB6A6;
+    }
+
+    25% {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 200px 17px #FFB6A6;
+    }
+
+    50% {
+        transform: translateY(0);
+        box-shadow: 0px 0px 300px 17px #FFB6A6;
+    }
+
+    75% {
+
+        box-shadow: 0px 0px 200px 17px #FFB6A6;
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: 0px 0px 100px 17px #FFB6A6;
+    }
+}

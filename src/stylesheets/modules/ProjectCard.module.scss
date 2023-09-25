@@ -1,0 +1,26 @@
+@import '../Variables/theming';
+@import '../utils';
+
+.root {
+    @extend .flex--column,
+    .gap-medium;
+
+    justify-content: space-between;
+    background-color: $lavender-gray;
+    background-image: $gradient-hero-banner;
+    padding: 24px;
+    border-radius: 8px;
+
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+    @extend .flex,
+    .gap-medium;
+
+    width: 100%;
+
+    a,button {
+        width: 100%;
+    }
+}
