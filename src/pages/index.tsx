@@ -3,8 +3,6 @@ import NavBar from '@/Components/BuiltEntirely/NavigationBar/root'
 import Image from '@/Components/Generics/Image'
 import { Bird, Cookie, Github, Library, Loader, Mailbox, Package } from 'lucide-react'
 import * as Project from '@/Components/Generics/ProjectCard'
-import { useEffect, useState } from 'react'
-
 interface Project {
     name: string,
     description: string,
@@ -16,14 +14,6 @@ interface Project {
 
 
 const Page = () => {
-    const [data, setData] = useState<any>()
-
-    useEffect(() => {
-        fetch('/api/projects').then(async (data) => {
-            setData(await data.json())
-        })
-    }, [])
-
     return (
         <>
             <Head>
@@ -55,7 +45,7 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <div className='inner__container flex--align-center' style={{ flex: 1.5 }}>
+                    <div className='inner__container flex--column flex--align-center gap-medium' style={{ flex: 1.5 }}>
                         <Image
                             Skeleton={Bird}
                             source='/images/avatar.jpg'
@@ -64,6 +54,8 @@ const Page = () => {
                             alt="Amélia's"
                             className='avatar--glowing'
                         />
+
+                        <span className='badge'>Dev. Front-End</span>
                     </div>
                 </div>
 
@@ -94,41 +86,38 @@ const Page = () => {
                                 <h1>Projetos</h1>
                             </div>
 
-                            <p>Projetos nos quais eu participei, criei ou gerencio.</p>
+                            <p>Projetos e/ou realizações nas quais eu participei, fiz ou manejo.</p>
                         </span>
 
                         <div className='projects__cards__grid'>
-                            {
-                                data?.data
-                                    ? data.data.filter(({ user }: any) => !user).map((project: Project, index: number) => {
-                                        return (
-                                            <Project.Root name={project.name} key={index}>
-                                                <Project.Title content={project.name}>
-                                                    {
-                                                        project.badge
-                                                            ? <span className='badge text--capitalize'>{project.badge}</span>
-                                                            : null
-                                                    }
-                                                </Project.Title>
+                            <Project.Root name='just-me-amelia'>
+                                <Project.Title content='just-me-amelia'>
+                                    <span className='badge text--capitalize'>Personal</span>
+                                </Project.Title>
 
-                                                <Project.Container>
-                                                    {project.description}
-                                                </Project.Container>
+                                <Project.Container>
+                                    &ldquo;just-me-amelia&rdquo; Is a project where I leave my personal website and images!
+                                </Project.Container>
 
-                                                <Project.Footer>
-                                                    {project?.links?.map((link, index: number) => {
-                                                        return (
-                                                            <a key={index} href={link.url} className='button text--capitalize'>{link.name}</a>
-                                                        )
-                                                    })}
-                                                </Project.Footer>
-                                            </Project.Root>
-                                        )
-                                    })
-                                    : (
-                                        <Loader />
-                                    )
-                            }
+                                <Project.Footer>
+                                    <a href='https://github.com/Canary2000/just-me-amelia' target='_blank' className='button text--capitalize'>Repositório</a>
+                                    <a href='https://github.com/Canary2000/just-me-amelia' target='_blank' className='button text--capitalize'>Visitar</a>
+                                </Project.Footer>
+                            </Project.Root>
+
+                            <Project.Root name='dust-rush'>
+                                <Project.Title content='dust-rush'>
+                                    <span className='badge text--capitalize'>DBaaS</span>
+                                </Project.Title>
+
+                                <Project.Container>
+                                    DustRush is a practical database service that can be created in a few minutes and without complications!
+                                </Project.Container>
+
+                                <Project.Footer>
+                                    <a href='https://github.com/dust-rush' target='_blank' className='button text--capitalize'>Visitar</a>
+                                </Project.Footer>
+                            </Project.Root>
                         </div>
                     </div>
 
@@ -148,16 +137,16 @@ const Page = () => {
                         <div style={{ marginTop: '16px' }}>
                             <ul>
                                 <li><strong>Línguas:</strong></li>
-                                <p className='badge'>Português (Língua materna), Inglês, Italiano, Francês, Espanhol...</p>
+                                <p className='badge'>Português, Inglês, Italiano, Francês...</p>
 
                                 <li><strong>Linguagens:</strong></li>
                                 <p className='badge'>HTML, CSS</p>
 
                                 <li><strong>Linguagens de programação:</strong></li>
-                                <p className='badge'>JavaScript e TypeScript, C#, Rust, Ruby...</p>
+                                <p className='badge'>JavaScript e TypeScript, Go, Rust...</p>
 
                                 <li><strong>Frameworks:</strong></li>
-                                <p className='badge'>Next, Tailwind CSS, Fastify, Express, SocketIo e mais.</p>
+                                <p className='badge'>Next, Fastify, Express, SocketIo e mais.</p>
 
                                 <li><strong>Bibliotecas:</strong></li>
                                 <p className='badge'>React, Radix UI, and more.</p>
@@ -186,7 +175,7 @@ const Page = () => {
                         <div className='flex--column gap-small'>
                             <div className='flex gap-small'>
                                 <strong>Email:</strong>
-                                <span className='badge'>amelia@devcage.tech</span>
+                                <span className='badge'>its.amelina@proton.me</span>
                             </div>
 
                             <div className='flex gap-small'>

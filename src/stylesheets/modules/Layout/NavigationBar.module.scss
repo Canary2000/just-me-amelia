@@ -37,6 +37,10 @@
 
 @media screen and (max-width: 768px) {
     .root {
-        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    #logo__text {
+        display: none
     }
 }

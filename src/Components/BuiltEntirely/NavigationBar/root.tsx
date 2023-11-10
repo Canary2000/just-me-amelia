@@ -16,7 +16,7 @@ const Root = () => {
                         RoundedBorders
                     />
 
-                    <h2>Amélia</h2>
+                    <h2 id={stylesheet.logo__text}>Amélia</h2>
                 </div>
             </nav>
         </>
