@@ -17,7 +17,7 @@ const Page = () => {
     return (
         <>
             <Head>
-                <title>Amélia&apos;s Website</title>
+                <title>🐾 Amélia&apos;s Website</title>
                 <meta name='description' content="Hii! I'm Lia!" />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
@@ -92,7 +92,7 @@ const Page = () => {
                         <div className='projects__cards__grid'>
                             <Project.Root name='just-me-amelia'>
                                 <Project.Title content='just-me-amelia'>
-                                    <span className='badge text--capitalize'>Personal</span>
+                                    <span className='badge text--capitalize'>Portfólio</span>
                                 </Project.Title>
 
                                 <Project.Container>
