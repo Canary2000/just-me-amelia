@@ -96,26 +96,26 @@ const Page = () => {
                                 </Project.Title>
 
                                 <Project.Container>
-                                    &ldquo;just-me-amelia&rdquo; Is a project where I leave my personal website and images!
+                                    &ldquo;just-me-amelia&rdquo; É o meu site pessoal!
                                 </Project.Container>
 
                                 <Project.Footer>
                                     <a href='https://github.com/Canary2000/just-me-amelia' target='_blank' className='button text--capitalize'>Repositório</a>
-                                    <a href='https://github.com/Canary2000/just-me-amelia' target='_blank' className='button text--capitalize'>Visitar</a>
                                 </Project.Footer>
                             </Project.Root>
 
-                            <Project.Root name='dust-rush'>
-                                <Project.Title content='dust-rush'>
-                                    <span className='badge text--capitalize'>DBaaS</span>
+                            <Project.Root name='imdjs'>
+                                <Project.Title content='imd.js'>
+                                    <span className='badge text--capitalize'>Biblioteca</span>
                                 </Project.Title>
 
                                 <Project.Container>
-                                    DustRush is a practical database service that can be created in a few minutes and without complications!
+                                    Uma elegante alternativa JavaScript para salvar dados em memória.
                                 </Project.Container>
 
                                 <Project.Footer>
-                                    <a href='https://github.com/dust-rush' target='_blank' className='button text--capitalize'>Visitar</a>
+                                    <a href='https://github.com/Canary2000/imd.js' target='_blank' className='button text--capitalize'>Repositório</a>
+                                    <a href='https://www.npmjs.com/package/imd.js' target='_blank' className='button text--capitalize'>Biblioteca</a>
                                 </Project.Footer>
                             </Project.Root>
                         </div>
